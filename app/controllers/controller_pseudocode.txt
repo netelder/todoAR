@@ -1,0 +1,26 @@
+add <description>
+  Task.new(description)
+  if valid
+    commit task
+  else
+    return error to user to correct
+  end
+end
+
+list
+  Task.all
+end
+
+delete <primary_key>
+  Task.delete(primary_key)
+  return task.desc
+end
+
+complete <primary_key>
+  task.complete
+  return task.desc
+end
+
+validate <task_object>
+  return true if <task_object> passes validation
+end

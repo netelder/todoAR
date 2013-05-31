@@ -1,0 +1,36 @@
+
+print welcome message
+
+print command list
+
+loop do
+  get command <arg>
+  case command
+
+  'quit'
+      break
+
+  'add'
+      validate arg
+      controller.add(arg)
+
+  'delete'
+      map <list_id> to <primary_key>
+      controller.delete(primary_key)
+
+  'list' 
+      controller.list
+      create formatted list with <list.id> <task.desc> hidden:<primary_key>
+      prettyprint formatted list
+
+  'complete'
+      map <list_id> to <primary_key>
+      controller.complete(primary_key)
+
+  default
+      print command list
+
+  end    
+end
+
+print farewell message
